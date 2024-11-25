@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.438e866f.css",
+    "main.js": "./static/js/main.b7b680b9.js",
+    "static/js/453.9ec24657.chunk.js": "./static/js/453.9ec24657.chunk.js",
+    "static/media/space.mov": "./static/media/space.838942e5aea25feaaca2.mov",
+    "static/media/gradsweb.png": "./static/media/gradsweb.a11e67dadd30a14b69c8.png",
+    "static/media/gradsapp.png": "./static/media/gradsapp.0260c563f239371253ff.png",
+    "static/media/grads.png": "./static/media/grads.83d37a3079ca17ccf1ec.png",
+    "static/media/hikari.png": "./static/media/hikari.287a1991315644775023.png",
+    "static/media/launion.png": "./static/media/launion.5c9a21c9096b3d7a7724.png",
+    "static/media/cristaos.png": "./static/media/cristaos.88b5dbe307db9236e792.png",
+    "static/media/weather.png": "./static/media/weather.31d6b67d561f30dad49c.png",
+    "static/media/logo.svg": "./static/media/logo.c322fae4e4965379c44f.svg",
+    "index.html": "./index.html",
+    "main.438e866f.css.map": "./static/css/main.438e866f.css.map",
+    "main.b7b680b9.js.map": "./static/js/main.b7b680b9.js.map",
+    "453.9ec24657.chunk.js.map": "./static/js/453.9ec24657.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.438e866f.css",
+    "static/js/main.b7b680b9.js"
+  ]
+}

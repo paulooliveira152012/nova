@@ -1,0 +1,306 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Space out elements */
+    padding: 0 20px; /* Add horizontal padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+}
+
+.logoContainer {
+    background-image: url('../frontend/images/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70px; /* Take full height of the parent */
+    aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+}
+
+.leftChild {
+    flex: 1;
+}
+
+.rightChild {
+    flex: 2;
+}
+
+.rightChild ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rightChild li {
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.rightChild li:hover {
+    color: yellow;
+}
+
+.active {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+}
+
+/* Burger Menu */
+.burgerMenu {
+    display: none; /* Initially hidden for larger screens */
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.burgerMenu div {
+    width: 35px;
+    height: 4px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Side Menu */
+.sideMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: grey;
+    color: white;
+    transform: translateX(100%); /* Hidden by default */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 20;
+}
+
+.sideMenu.visible {
+    transform: translateX(0); /* Slide in when visible */
+}
+
+.sideMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sideMenu li {
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sideMenu li:hover {
+    color: yellow;
+}
+
+.sideMenu .closeButton {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    /* background-image: url('../frontend/images/hero.png'); */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    clip-path: polygon(1px 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 1px), 1px calc(100% - 1px));
+    transition: clip-path 0.3s ease-in-out;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.backgroundVideo {
+    position: absolute;
+    z-index: -1;
+}
+
+.phraseContainer {
+    margin-right:20px ;
+    padding: 0;
+    align-self: center;
+    margin: auto;
+}
+
+.phraseContainer h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+
+.phraseContainer h2 {
+    font-size: medium;
+    font-style: italic;
+}
+
+/* projects */
+/* Specific image styles */
+
+.projectsContainer {
+    /* background-color: green; */
+    display: flex; /* Align items in a row */
+    gap: 20px; /* Add space between items */
+    padding: 10px; /* Add padding around the container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.projectContainerWide {
+    flex: 1 1 calc(33.33% - 20px); /* Three items per row with space in between */
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 33%; /* Set a minimum width for items */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth scaling */
+    transform-origin: center; /* Scale from the center */
+    display: inline-block;
+    z-index: 1;
+    transform: scale(0.8); /* Larger size for the active project */
+}
+
+.projectContainerWide:hover {
+    
+    z-index: 3; /* Bring to the front on hover */
+  }
+
+  .projectContainerWide.activeProject {
+    transform: scale(1); /* Larger size for the active project */
+    z-index: 3; /* Bring to the front */
+  }
+
+  /* Add overlay effect */
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: filter 0.3s ease;
+  }
+
+  .projectDescription {
+    font-size: 14px;
+    color: white;
+    line-height: 1.5em;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 5px 30px; */
+  }
+
+.hikari {
+    background-image: url('../frontend//images//projectsScreenshot/hikari.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .gradsApp {
+    background-image: url('../frontend//images//projectsScreenshot/gradsapp.png');
+  }
+  
+  .gradsWebsite {
+    background-image: url('../frontend//images//projectsScreenshot/gradsweb.png');
+  }
+  
+  
+  .laUnionImg {
+    background-image: url('../frontend//images//projectsScreenshot/launion.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .weatherApp {
+    background-image: url('../frontend//images//projectsScreenshot/weather.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .cristaos {
+    background-image: url('../frontend//images//projectsScreenshot/cristaos.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .grads {
+    background-image: url('../frontend//images//projectsScreenshot/grads.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    .header .rightChild {
+        display: none; /* Hide main menu */
+    }
+
+    .burgerMenu {
+        display: flex; /* Show burger menu */
+    }
+
+    .sideMenu {
+        width: 50%; /* Take more space on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .burgerMenu div {
+        width: 30px; /* Adjust for smaller screens */
+        height: 3px;
+    }
+
+    /* width for projects 100% */
+    .projectContainerWide {
+        flex: 1 1 auto; /* Prevent resizing or wrapping */
+
+        background-color: black;
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 100%; /* Set a minimum width for items */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }   
+}
+
+@media screen and (max-width: 500px) {
+    .sideMenu {
+        width: 100%; /* Take more space on smaller screens */
+        text-align: center;
+    }
+}
