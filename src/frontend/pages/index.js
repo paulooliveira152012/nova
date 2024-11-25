@@ -7,21 +7,28 @@ const Landing = () => {
     return (
         <div>
             <div className="hero">
-                <iframe
-                    src="https://www.youtube.com/embed/iZueupRLZ5A?autoplay=1&mute=1&loop=1&playlist=iZueupRLZ5A"
-                    title="Background Video"
-                    frameBorder="0"
-                    allow="autoplay"
+                <video
+                    className="backgroundVideo"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     style={{
                         position: "absolute",
                         top: 0,
                         left: 0,
                         width: "100%",
                         height: "100%",
-                        pointerEvents: "none",
+                        objectFit: "cover",
                         zIndex: -1,
                     }}
-                ></iframe>
+                >
+                    <source
+                        src="https://novapg.s3.us-east-2.amazonaws.com/hero.mov"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
                 <div className="phraseContainer" style={{ position: "relative" }}>
                     <h1>Nova <br /></h1>
                     <h2>Your vision, our innovation</h2>
