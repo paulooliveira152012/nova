@@ -13,4 +13,4 @@ const admSchema = new mongoose.Schema({
     }
 }) 
 
-module.exports = mongoose.model('Adm', admSchema)
+module.exports = mongoose.model('Adm', admSchema, 'adm')

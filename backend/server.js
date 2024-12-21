@@ -9,6 +9,10 @@ const admRoutes = require('./routes/login')
 
 // create / initiate an app
 const app = express();
+
+// use json for parsing info (needed when receiving info from frontend)
+app.use(express.json());
+
 // use imported route(s)
 app.use('/api/adm', admRoutes)
 
